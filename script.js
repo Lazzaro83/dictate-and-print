@@ -1,8 +1,9 @@
-function record(){
-    // starts using API speech recognition present in browser
-    window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+// starts using API speech recognition present in browser
+window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+var recognition = new SpeechRecognition();
 
-    var recognition = new SpeechRecognition();
+function record(){
+    
     // populating text while speaking
     recognition.interimResults = true;
 
@@ -31,4 +32,8 @@ function record(){
     recognition.addEventListener('end', recognition.start);
 
     recognition.start();
+}
+
+function stop(){
+    recognition.stop();
 }
