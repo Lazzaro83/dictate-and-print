@@ -24,7 +24,10 @@ body{
 .buttonsPart{
     display: inline-block;
     width:475px;
-    margin:50px 450px;
+    margin-top: 50px;
+    margin-right: 0;
+    margin-bottom: 50px;
+    margin-left: 450px;
     border-radius:5px;
     box-shadow:10px 10px 0 rgba(0,0,0,0.1);
 }
