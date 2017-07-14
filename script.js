@@ -40,5 +40,23 @@ function stop(){
 
 function sendEmail(){
   var text = document.querySelector(".dictate").textContent;
-  console.log(text);
+  //console.log(text);
+  var body = document.getElementById('body');
+  var mail = document.createElement("div");
+  mail.className = "input";
+  var mailTo = document.createElement("input");
+  mailTo.placeholder = "Mail to: "
+  var subject = document.createElement("input");
+  subject.placeholder = "Subject of mail: "
+  var mailText = document.createElement("p");
+  mailText.textContent = text;
+  mailText.className = "textStyle";
+  var buttonSend = document.createElement("button");
+  buttonSend.innerHTML = "Send!";
+  buttonSend.className = "buttonSend";
+  mail.appendChild(mailTo);
+  mail.appendChild(subject);
+  mail.appendChild(mailText);
+  mail.appendChild(buttonSend);
+  body.appendChild(mail);
 }

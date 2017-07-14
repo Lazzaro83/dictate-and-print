@@ -38,3 +38,28 @@ button{
     background-color: #ffc600;
     padding: 15px;
 }
+
+.input{
+    visibility: visible;
+    height: 500px;
+    width: 700px;
+    position: absolute;
+    left: 300px;
+    top:30px;
+    background: linear-gradient(to right, #2b467c, #e6b6e3);
+}
+input{
+    height: 50px;
+    width: 330px;
+    margin:5px;
+}
+.textStyle{
+    width: 640px;
+    margin:10px;
+    background-color: white;
+}
+.buttonSend{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
