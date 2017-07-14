@@ -7,8 +7,8 @@ function record(){
     recognition.interimResults = true;
 
     let p = document.createElement('p');
-    const words = document.querySelector('.dictate');
-    words.appendChild(p);
+    const dictate = document.querySelector('.dictate');
+    dictate.appendChild(p);
 
   recognition.addEventListener('result', e => {
     // creates an Array from content of speechRecognition
@@ -19,11 +19,11 @@ function record(){
       .join('')
 
       p.textContent = transcript;
-      //console.log(transcript);
+      console.log(transcript);
       // creates new p element after pause in speach
       if (e.results[0].isFinal) {
         p = document.createElement('p');
-        words.appendChild(p);
+        dictate.appendChild(p);
       }
     });
 
