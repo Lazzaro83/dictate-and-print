@@ -39,6 +39,6 @@ function stop(){
 }
 
 function sendEmail(){
-  var text = document.querySelector(".dictate").innerHTML;
+  var text = document.querySelector(".dictate").textContent;
   console.log(text);
 }
