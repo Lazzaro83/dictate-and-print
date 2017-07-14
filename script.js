@@ -1,7 +1,7 @@
 function record(){
     window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
-    var recognition = new window.SpeechRecognition();
+    var recognition = new SpeechRecognition();
     recognition.interimResults = true;
 
     var p = document.createElement('p');
@@ -9,7 +9,7 @@ function record(){
     words.appendChild(p);
 
     recognition.addEventListener('result', e => {
-      console.log(e);
+      //console.log(e);
        var transcript = Array.from(e.results)
         .map(result => result[0])
         .map(result => result.transcript)
