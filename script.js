@@ -54,9 +54,21 @@ function sendEmail(){
   var buttonSend = document.createElement("button");
   buttonSend.innerHTML = "Send!";
   buttonSend.className = "buttonSend";
+  buttonSend.onclick = function(){
+    mail.style.visibility = "hidden";
+    //there should be also mail sending functionality
+  }
   mail.appendChild(mailTo);
   mail.appendChild(subject);
   mail.appendChild(mailText);
   mail.appendChild(buttonSend);
   body.appendChild(mail);
+}
+
+function printText(){
+  var text = document.querySelector(".dictate").textContent;
+  var originalContent = document.body.innerHTML;
+  document.body.innerHTML = text;
+  window.print();
+  document.body.innerHTML = originalContent;
 }
