@@ -21,6 +21,18 @@ body{
     position: relative;
     line-height:3rem;
 }
+.buttonsPart{
+    display: inline-block;
+    width:475px;
+    margin:50px 450px;
+    border-radius:5px;
+    box-shadow:10px 10px 0 rgba(0,0,0,0.1);
+}
 p{
     margin: 0 0 3rem 0;
+}
+button{
+    border-radius:5px;
+    background-color: #ffc600;
+    padding: 15px;
 }
