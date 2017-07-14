@@ -19,7 +19,7 @@ body{
     background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffc600), color-stop(4%, #fff)) 0 4px;
     background-size: 100% 3rem;
     position: relative;
-    line-height:1rem;
+    line-height:3rem;
 }
 .buttonsPart{
     display: inline-block;
@@ -31,7 +31,7 @@ body{
     box-shadow:10px 10px 0 rgba(0,0,0,0.1);
 }
 p{
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 3rem 0;
 }
 button{
     border-radius:5px;

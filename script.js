@@ -37,3 +37,8 @@ function record(){
 function stop(){
     recognition.stop();
 }
+
+function sendEmail(){
+  var text = document.querySelector(".dictate").innerHTML;
+  console.log(text);
+}
