@@ -4,21 +4,22 @@ function record(){
     var recognition = new SpeechRecognition();
     recognition.interimResults = true;
 
-    var p = document.createElement('p');
-    var words = document.querySelector('.dictate');
-    words.appendChild(p);
+    let p = document.createElement('p');
+  const words = document.querySelector('.dictate');
+  words.appendChild(p);
 
-    recognition.addEventListener('result', e => {
-      console.log(e.results);
-    /*   var transcript = Array.from(e.results)
-        .map(result => result[0])
-        .map(result => result.transcript)
-        .join('')
+  recognition.addEventListener('result', e => {
+    const transcript = Array.from(e.results)
+      .map(result => result[0])
+      .map(result => result.transcript)
+      .join('')
 
-        if (e.results[0].isFinal) {
-          p = document.createElement('p');
-          words.appendChild(p);
-        }*/
+      console.log(transcript);
+
+      /*if (e.results[0].isFinal) {
+        p = document.createElement('p');
+        words.appendChild(p);
+      }*/
     });
 
     recognition.addEventListener('end', recognition.start);
