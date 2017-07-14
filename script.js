@@ -1,24 +1,26 @@
-window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+function record(){
+    window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
-const recognition = new SpeechRecognition();
-recognition.interimResults = true;
+    const recognition = new SpeechRecognition();
+    recognition.interimResults = true;
 
-let p = document.createElement('p');
-const words = document.querySelector('.dictate');
-words.appendChild(p);
+    let p = document.createElement('p');
+    const words = document.querySelector('.dictate');
+    words.appendChild(p);
 
-recognition.addEventListener('result', e => {
-   const transcript = Array.from(e.results)
-    .map(result => result[0])
-    .map(result => result.transcript)
-    .join('')
+    recognition.addEventListener('result', e => {
+       const transcript = Array.from(e.results)
+        .map(result => result[0])
+        .map(result => result.transcript)
+        .join('')
 
-    if (e.results[0].isFinal) {
-      p = document.createElement('p');
-      words.appendChild(p);
-    }
-});
+        if (e.results[0].isFinal) {
+          p = document.createElement('p');
+          words.appendChild(p);
+        }
+    });
 
-recognition.addEventListener('end', recognition.start);
+    recognition.addEventListener('end', recognition.start);
 
-recognition.start();
+    recognition.start();
+}
