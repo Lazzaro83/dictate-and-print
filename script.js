@@ -9,8 +9,8 @@ function record(){
     words.appendChild(p);
 
     recognition.addEventListener('result', e => {
-      //console.log(e);
-       var transcript = Array.from(e.results)
+      console.log(e.results);
+    /*   var transcript = Array.from(e.results)
         .map(result => result[0])
         .map(result => result.transcript)
         .join('')
@@ -18,7 +18,7 @@ function record(){
         if (e.results[0].isFinal) {
           p = document.createElement('p');
           words.appendChild(p);
-        }
+        }*/
     });
 
     recognition.addEventListener('end', recognition.start);
