@@ -4,7 +4,7 @@ const recognition = new SpeechRecognition();
 recognition.interimResults = true;
 
 let p = document.createElement('p');
-const words = document.querySelector('.words');
+const words = document.querySelector('.dictate');
 words.appendChild(p);
 
 recognition.addEventListener('result', e => {
@@ -12,9 +12,6 @@ recognition.addEventListener('result', e => {
     .map(result => result[0])
     .map(result => result.transcript)
     .join('')
-
-    const poopScript = transcript.replace(/poop|poo|shit|dump/gi, '💩');
-    p.textContent = poopScript;
 
     if (e.results[0].isFinal) {
       p = document.createElement('p');
